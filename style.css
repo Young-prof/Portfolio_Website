@@ -1,0 +1,376 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #0a192f;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: #ecf0f1;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #0a192f;
+}
+
+/* Hexagonal logo styles */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 55px; /* Reduced width */
+    height: 69.3px; /* Adjusted height for upright hexagon */
+    left: 2em;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%; /* Match parent width */
+    height: 100%; /* Match parent height */
+    background-color: #2c3e50; /* Dark Blue Gray */
+    color: #358882; /* Light Gray */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    border: 3px solid #e74c3c; /* Border with Bright Red color */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.logo a:hover {
+    background-color: #e74c3c; /* Bright Red */
+    border: 15px solid #358882; /* White border on hover */
+    transform: scale(1.05);
+    border-radius: 40%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+nav ul li {
+    margin: 0 1rem;
+    position: relative;
+}
+
+nav ul li a {
+    /* padding: 0.5rem 1rem; */
+    padding: 8px 6px;
+    border: 0.00001px solid #e74c3c; /* Bright Red */
+    color: #77b6b2; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ecf0f1;
+    transform: scale(1.05);
+}
+
+nav ul li .dropdown-content {
+    min-width: fit-content;
+    display: none;
+    position: absolute;
+    /* top: 100%; */
+    left: 0;
+    /* background-color: #444; */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+nav ul li .dropdown-content li {
+    padding: 0.5rem 1rem;
+}
+
+nav ul li .dropdown-content li a {
+    color: #fff;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li .dropdown-content li a:hover {
+    background-color: #358882;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hero section styles */
+.hero-section {
+    padding: 5rem 1rem;
+    height: 67vh;
+    position: relative;
+    color: #ffffff;
+}
+
+.hero-section img {
+    height: 560px;
+    width: 500px;
+    border-radius: 100%;
+    position: absolute;
+    top: 0.5em;
+    right: 5em;
+}
+
+.hero-section .hero-text{
+    position: absolute;
+    left: 13em;
+    top: 3em;
+    line-height: 2em;
+}
+
+.hero-section .welcome {
+    font-size: 1.5rem;
+    animation: fadeInUp 2s;
+    color: #358882;
+}
+.hero-section .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 3s;
+    color: #ccd6f6;
+    font-weight: bolder;
+}
+
+.hero-section .spaname{
+    font-size: 16px;
+}
+.hero-section .hero-text h2{
+    font-size: 2em;
+}
+.hero-section .hero-text h2, p, p{
+    color: #828caa;
+}
+
+/* Contact Me button styles */
+.contact-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #e74c3c; /* Bright Red */
+    color: #358882; /* Bright Red */
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.contact-button:hover {
+    background-color: #e74c3c; /* Bright Red */
+    color: #605d5d; /* White */
+    transform: scale(1.05);
+}
+
+
+
+/* Basic styling for the hero section */
+
+#neural-network {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Ensure canvas is behind the text */
+}
+
+#blockchain-scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Ensure canvas is behind the text */
+}
+
+
+/* End of Hero Section */
+
+/* About Me section styles */
+#about-me {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    padding: 3rem 1rem;
+    text-align: center;
+    height: 100vh;
+}
+
+#about-me h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    color: #e74c3c;
+}
+
+#about-me h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #ff9800;
+    margin: 0.5rem auto 0;
+    animation: expand 1s;
+}
+
+#about-me p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 2s;
+}
+
+/* Footer styles */
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes expand {
+    from { width: 0; }
+    to { width: 50px; }
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    nav ul li {
+        margin: 0 0.5rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    #about-me h2 {
+        font-size: 2rem;
+    }
+
+    #about-me p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #333;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    nav ul li a {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    #about-me h2 {
+        font-size: 1.5rem;
+    }
+
+    #about-me p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-section {
+        padding: 3rem 1rem;
+    }
+
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+
+    #about-me h2 {
+        font-size: 1.2rem;
+    }
+
+    #about-me p {
+        font-size: 0.8rem;
+    }
+}

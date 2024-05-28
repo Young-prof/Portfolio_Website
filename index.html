@@ -3,19 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <title>Tekenatei Franklyn</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Franklyn: Building Innovative Products</title>
 </head>
 <body>
-    <nav class="Nav">
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <a href="#">TK</a>
+        </div>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="./HTML_FILES/blog.html">Blog</a></li>
-          <li><a href="./HTML_FILES/about.html">About Me</a></li>
-          <li><a href="./HTML_FILES/contact.html">Contact Me</a></li>
-          <li><a href="./HTML_FILES/resources.html">Resources</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about-me">About Me</a></li>
+            <li class="dropdown">
+                <a href="#">Portfolio</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Product Management Portfolio</a></li>
+                    <li><a href="#">Software Engineering Portfolio</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Me</a></li>
+            <li><a href="#">My Story</a></li>
+            <li class="dropdown">
+                <a href="#">Resources</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">PM Resources</a></li>
+                    <li><a href="#">My Book Collection</a></li>
+                    <li><a href="#">Manager Readme</a></li>
+                </ul>
+            </li>
         </ul>
-      </nav>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <img src="./Images/hero_pic.jpg" alt="My Picture">
+        <div class="hero-text">
+            <p class="welcome">Hi, welcome to my world.</p>
+            <h1> <span class="spaname">My name is</span>Tekenatei Franklyn.</h1>
+            <h2><span class="spaname">I'm a</span>Technical Product Manager</h2>
+            <p>I transform visions into impactful realities, bringing innovation to life with passion and precision.</p>
+            <p>I drive innovation and leadership in tech, blending product management, <br> software engineering, digital marketing, and personal branding, <br> with a passion for AI, blockchain and FinTech.</p>
+            <a href="#contact-me" class="contact-button">Contact Me</a>
+        </div>
+        <canvas id="neural-network"></canvas>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>Hello! I'm TK, a Product Manager and Front-End Software Engineer with a passion for leadership and public speaking. Welcome to my personal portfolio website where you can learn more about my professional journey, projects, and resources.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TK. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
