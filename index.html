@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Tekenatei Franklyn</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navbar -->
     <nav>
+        <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
         <div class="logo">
             <a href="#">TK</a>
         </div>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#about">About Me</a></li>
             <li class="dropdown">
                 <a href="#">Portfolio</a>
                 <ul class="dropdown-content">
@@ -52,10 +56,69 @@
         <canvas id="neural-network"></canvas>
     </section>
 
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <h3>Subscribe to my<a href="https://your-email-newsletter-link.com" class="newsletter-link">Email Newsletter</a></h3>
+        </div>
+    </section>    
+    
+
     <!-- About Me Section -->
-    <section id="about-me">
-        <h2>About Me</h2>
-        <p>Hello! I'm TK, a Product Manager and Front-End Software Engineer with a passion for leadership and public speaking. Welcome to my personal portfolio website where you can learn more about my professional journey, projects, and resources.</p>
+    <section  class="about" id="about">
+        <div class="aboutCon">
+            <h1 class="section-title-01">About Me</h1>
+            <h2 class="section-title-02">About Me</h2>
+        </div>    
+        <div class="about-img">
+            <img src="Images/about-img.jpg" alt="A full picture of me">
+        </div>
+        
+        <div class="about-info">
+                <div class="description" >
+                    <h3><span>Hello,</span> <span>I'm</span> Tekenatei Franklyn</h3>
+                    <p>
+                        An Associate Product Manager and an ALX-trained Front-End Software 
+                        Engineer based in Nigeria. Technology has always been my passion, 
+                        and I am dedicated to using it to solve real-world problems.
+
+                        I'm at the beginning of my professional journey, driven by a love 
+                        for technology and a desire to create impactful solutions. My focus 
+                        is on developing my skills as a product manager and front-end engineer, 
+                        aiming to bring innovative products to life that improve people's lives.
+                        
+                        From a young age, I've been fascinated by how technology can change the
+                         world. This curiosity led me to pursue training with ALX, where I honed 
+                         my skills in Software Engineering. The journey has been incredibly rewarding, 
+                         allowing me to blend my technical skills with my passion for product management.
+                        
+                        Looking ahead, I am eager to continue growing as a technologist and leader. My goal is to work on modern, innovative projects that push the boundaries of what's possible, especially in AI and blockchain.
+                        
+                        I also run a YouTube channel where I provide guidance and insights to young people, sharing my journey and lessons learned.
+                    </p>
+                </div>
+                <div class="experience-projects-resume">
+                    <div class="resume">
+                        <a href="your-resume-link.pdf" target="_blank" class="resume-button">Resume</a>
+                    </div>
+                    <div class="experience">
+                        <h3>Years of Experience</h3>
+                        <p>3+</p>
+                    </div>
+                    <div class="projects">
+                        <h3>Success Projects</h3>
+                        <p>10+</p>
+                    </div>
+                </div>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/yourprofile" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com/channel/yourchannel" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/yourprofile" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+        </div>
     </section>
 
     <!-- Footer -->

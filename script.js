@@ -1,4 +1,6 @@
 
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const canvas = document.getElementById('neural-network');
     const ctx = canvas.getContext('2d');
@@ -82,3 +84,17 @@ document.addEventListener("DOMContentLoaded", function() {
     animate();
 });
 
+
+
+function toggleSocials() {
+    const socialsLinks = document.getElementById('socials-links');
+    if (socialsLinks.style.display === 'none' || socialsLinks.style.display === '') {
+        socialsLinks.style.display = 'flex';
+    } else {
+        socialsLinks.style.display = 'none';
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('socials-links').style.display = 'none';
+});

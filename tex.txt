@@ -19,3 +19,14 @@ Leadership and Public Speaking: Feature a podium or microphone, books on leaders
 Creative and Modern Design: Use a sleek, modern aesthetic with clean lines and vibrant colors. Incorporate abstract shapes or patterns that evoke a sense of innovation and forward-thinking.
 YouTube Elements: Include typical YouTube studio components like lighting rigs, cameras, and a "Recording" sign.
 Personal Branding: Subtle elements that hint at personal branding, like logos or monograms, should be part of the design.
+
+
+
+
+Hello! I'm Tekenatei Franklyn, an Associate Product Manager and an ALX trained Front-End Software Engineer based in Nigeria. Technology has always been a passion of mine, and I am dedicated to using it to solve real-world problems.
+
+I'm at the beginning of my professional journey, driven by a deep love for technology and a desire to create impactful solutions. My current focus is on developing my skills as a product manager and front-end engineer, striving to bring innovative products to life that improve people's lives.
+
+From a young age, I've been fascinated by how technology can change the world. This curiosity led me to pursue training with ALX, where I honed my skills in front-end development. The journey has been incredibly rewarding, allowing me to blend my technical skills with my passion for product management. Along the way, I've embraced every learning opportunity, knowing that each step brings me closer to achieving my goals.
+
+Looking ahead, I am eager to continue growing as a technologist and leader. My goal is to work on modern, innovative projects that push the boundaries of what's possible. I'm particularly interested in exploring the realms of AI and blockchain, and how these technologies can be leveraged to create new and exciting solutions. As I advance in my career, I remain committed to learning, growing, and building products that make a difference.
