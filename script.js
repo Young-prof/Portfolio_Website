@@ -1,6 +1,3 @@
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
     const canvas = document.getElementById('neural-network');
     const ctx = canvas.getContext('2d');
@@ -85,16 +82,28 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
-function toggleSocials() {
-    const socialsLinks = document.getElementById('socials-links');
-    if (socialsLinks.style.display === 'none' || socialsLinks.style.display === '') {
-        socialsLinks.style.display = 'flex';
-    } else {
-        socialsLinks.style.display = 'none';
-    }
-}
-
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('socials-links').style.display = 'none';
+    const menuOpen = document.getElementById("menu-open");
+    const menuClose = document.getElementById("menu-close");
+    const navUl = document.querySelector("nav ul");
+
+    menuOpen.addEventListener("click", function() {
+        navUl.classList.toggle("show");
+        menuOpen.style.display = "none";
+        menuClose.style.display = "block";
+    });
+
+    menuClose.addEventListener("click", function() {
+        navUl.classList.toggle("show");
+        menuOpen.style.display = "block";
+        menuClose.style.display = "none";
+    });
+
+    navUl.addEventListener("click", function(e) {
+        if (e.target.tagName === "A") {
+            navUl.classList.remove("show");
+            menuOpen.style.display = "block";
+            menuClose.style.display = "none";
+        }
+    });
 });

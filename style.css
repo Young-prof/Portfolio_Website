@@ -7,6 +7,9 @@ body {
     color: #333;
     background-color: #0a192f;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 a {
     text-decoration: none;
@@ -40,124 +43,14 @@ nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-
-
-
-/* Navbar styles */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    color: #ecf0f1;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #0a192f;
-}
-
-/* Menu Icon for mobile */
-.menu-icon {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #ecf0f1;
-}
-
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        background-color: #333;
-        width: 100%;
-        display: none; /* Initially hide the menu */
-    }
-
-    nav ul.show {
-        display: flex; /* Show the menu when toggled */
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
-        width: 100%;
-        text-align: left;
-    }
-
-    nav ul li a {
-        width: 100%;
-        padding: 1rem;
-    }
-
-    .menu-icon {
-        display: block; /* Show the menu icon on small screens */
-    }
-
-    .hero-section h1 {
-        font-size: 2rem;
-    }
-
-    .hero-section p {
-        font-size: 1rem;
-    }
-
-    #about-me h2 {
-        font-size: 1.5rem;
-    }
-
-    #about-me p {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .hero-section {
-        padding: 3rem 1rem;
-    }
-
-    .hero-section h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero-section p {
-        font-size: 0.9rem;
-    }
-
-    #about-me h2 {
-        font-size: 1.2rem;
-    }
-
-    #about-me p {
-        font-size: 0.8rem;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
 /* Hexagonal logo styles */
 .logo {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 55px; /* Reduced width */
-    height: 69.3px; /* Adjusted height for upright hexagon */
+    width: 55px; 
+    height: 69.3px; 
     left: 2em;
 }
 
@@ -190,6 +83,7 @@ nav ul {
     display: flex;
     align-items: center;
     position: relative;
+    float: right;
 }
 
 nav ul li {
@@ -215,7 +109,7 @@ nav ul li .dropdown-content {
     min-width: fit-content;
     display: none;
     position: absolute;
-    /* top: 100%; */
+    top: 100%;
     left: 0;
     /* background-color: #444; */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -251,11 +145,12 @@ nav ul li:hover .dropdown-content {
     height: 67vh;
     position: relative;
     color: #ffffff;
+    z-index: 1;
 }
 
 .hero-section img {
     height: 560px;
-    width: 500px;
+    width: 550px;
     border-radius: 100%;
     position: absolute;
     top: 0.5em;
@@ -293,27 +188,33 @@ nav ul li:hover .dropdown-content {
 }
 
 /* Contact Me button styles */
-.contact-button {
+.contact-btn {
     display: inline-block;
     margin-top: 1.5rem;
     padding: 0.75rem 1.5rem;
-    border: 2px solid #e74c3c; /* Bright Red */
-    color: #358882; /* Bright Red */
+    border: 2px solid #e74c3c; 
+    color: #358882; 
     font-size: 1rem;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: capitalize;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     text-align: center;
+    cursor: pointer; 
+    position: relative;
+    z-index: 2;
 }
 
-.contact-button:hover {
-    background-color: #e74c3c; /* Bright Red */
-    color: #605d5d; /* White */
+.contact-btn:hover {
     transform: scale(1.05);
+    background-color: rgba(231, 76, 60, 0.1);
+} 
+
+
+/* Ensuring button is clickable and active effect */
+.contact-btn:active {
+    transform: scale(0.95);
 }
-
-
 
 /* Basic styling for the hero section */
 
@@ -325,16 +226,6 @@ nav ul li:hover .dropdown-content {
     height: 100%;
     z-index: 0; /* Ensure canvas is behind the text */
 }
-
-#blockchain-scene {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0; /* Ensure canvas is behind the text */
-}
-
 
 /* End of Hero Section */
 
@@ -415,7 +306,7 @@ nav ul li:hover .dropdown-content {
     flex-direction: column;
     position: absolute;
     top: 0;
-    left: 35%;
+    left: 40%;
     height: 4em;
     align-items: center;   
     margin-top: 5em;
@@ -429,17 +320,19 @@ nav ul li:hover .dropdown-content {
     max-width: 100%;  
     border-radius: 8px;
     height: 400px;
-    width: 25em;
+    width: 21em;
     height: 30em;
     position: absolute;
-    top: 10em;
-    left: 4em;
+    top: 13em;
+    left: 13em;
 }
 
 .about-info{
     position: absolute;
     right: 20em;
     margin-top: 13em;
+    left: 40%;
+    top: 0;
 }
 .about-info .description {
     max-width: 600px;
@@ -450,7 +343,6 @@ nav ul li:hover .dropdown-content {
     font-weight: 600;
     margin-bottom: 10px;
     color: #358882;
-    padding-left: 2em;
 }
 .about-info .description h3 span {
     color: #e74c3c;
@@ -464,8 +356,6 @@ nav ul li:hover .dropdown-content {
     line-height: 25px;
     text-align: justify;
     border-bottom: 1px solid var(--line-color);
-    padding-left: 3em;
-    padding-right: 3em;
 }
 
 
@@ -473,10 +363,9 @@ nav ul li:hover .dropdown-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2em;
     padding: 2em;
-    /* background-color: #f0f4f8; */
     border-radius: 10px;
+    gap: 10px;
 }
 
 .experience, .projects, .resume {
@@ -487,15 +376,23 @@ nav ul li:hover .dropdown-content {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.experience, .projects{
+    border: 2px solid #e74c3c;
+    width: 4em;
+    height: 7em;
+}
 .experience h3, .projects h3 {
     font-size: 1.5em;
-    color: #333;
+    color: #358882;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .experience p, .projects p {
     font-size: 2em;
-    color: #007BFF;
-    margin-top: 0.5em;
+    color: #ccd6f6;
+    margin-top: 0;
+    margin-bottom: 7em;
 }
 
 .experience:hover, .projects:hover {
@@ -505,19 +402,19 @@ nav ul li:hover .dropdown-content {
 
 .resume-button {
     display: inline-block;
-    padding: 0.5em 1em;
+    padding: 0.5em;
     font-size: 1.2em;
-    color: #007BFF;
-    border: 2px solid #007BFF;
+    color: #358882;
+    border: 2px solid #e74c3c;
     border-radius: 10px;
     text-decoration: none;
     transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+    z-index: -1;
 }
 
 .resume-button:hover {
-    color: #fff;
-    background-color: #007BFF;
-    border-color: #0056b3;
+    background-color: rgba(231, 76, 60, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 
@@ -527,12 +424,13 @@ nav ul li:hover .dropdown-content {
     flex-direction: column;
     align-items: end;
     position: absolute;
-    right: 3em;
+    right: 12em;
 }
 
 .social-icon {
     font-size: 2em;
-    color: #007BFF;
+    color: #e74c3c;
+    
     margin: 0.5em 0;
     transition: transform 0.3s, color 0.3s, border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
     padding: 10px;
@@ -541,16 +439,16 @@ nav ul li:hover .dropdown-content {
 }
 
 .social-icon:hover {
-    color: #0056b3;
+    color: #358882;
     transform: scale(1.2) rotate(10deg);
-    border-color: #0056b3;
-    background-color: rgba(0, 123, 255, 0.1);
+    border-color: #358882;
+    background-color: rgba(231, 76, 60, 0.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer styles */
 footer {
-    color: #fff;
+    color: #358882;
     text-align: center;
     padding: 1rem 0;
     background-color: #e74c3c;
@@ -577,3 +475,330 @@ footer {
     to { width: 50px; }
 }
 
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon i {
+    font-size: 1.5rem;
+    color: #ecf0f1;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 1118px) {
+    
+   .menu-icon{
+    display: block;
+   }
+   nav ul{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    top: 5px;
+    left: -100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+   }
+   nav ul li{
+    display: block;
+    margin: 10px 0;
+    line-height: 25px;
+   }
+   nav ul li a{
+    font-size: 17px;
+   }
+   
+    /* .logo {
+        position: relative;
+        width: 40px; 
+        height: 69.3px; 
+        left: 2em;
+    }
+    
+    .hero-section {
+        padding: 5rem 1rem;
+        height: 100vh;
+        position: relative;
+        z-index: 1
+    } */
+    
+    /* .hero-section img {
+        height: 60px;
+        width: 50px;
+    
+        align-items: center;
+    } */
+    
+    .hero-section .hero-text{
+        /* position: absolute;
+        align-items: center;
+        top: 3em; */
+    }
+    
+    .hero-section .welcome {
+        /* font-size: 1.5rem;
+        animation: fadeInUp 2s;
+        color: #358882; */
+    }
+    .hero-section .hero-text h1 {
+        /* font-size: 3rem;
+        margin-bottom: 1rem;
+        animation: fadeInDown 3s;
+        color: #ccd6f6;
+        font-weight: bolder; */
+    }
+    
+    /* .hero-section .spaname{
+        font-size: 16px;
+    }
+    .hero-section .hero-text h2{
+        font-size: 2em;
+    } */
+    
+    /* Contact Me button styles */
+    /* .contact-btn {
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 0.75rem 1.5rem;
+        border: 2px solid #e74c3c; 
+        color: #358882; 
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: capitalize;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        text-align: center;
+        cursor: pointer; 
+        position: relative;
+        z-index: 2;
+    } */
+    
+    /* .contact-btn:hover {
+        transform: scale(1.05);
+        background-color: rgba(231, 76, 60, 0.1);
+    }  */
+    
+    
+    /* Ensuring button is clickable and active effect */
+    /* .contact-btn:active {
+        transform: scale(0.95);
+    } */
+    
+    /* Basic styling for the hero section */
+    
+    /* #neural-network {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0; 
+    } */
+    
+    /* End of Hero Section */
+    
+    /* Email Newsletter Section  */
+    /* .newsletter-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4em; 
+        background-color: #e74c3c; /
+    }
+    
+    .newsletter-container  {
+        font-size: 1em;
+        color: #ccd6f6;
+    }
+    
+    .newsletter-link {
+        display: inline-block;
+        padding: 0.5em;
+        font-size: 1em;
+        border: none;
+        border-radius: 5px;
+        text-decoration:  underline;
+        font-style: italic;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    .newsletter-link:hover {
+        text-underline-offset: unset;
+        color: #0a192f;
+    }
+     */
+    
+    
+    /* About Me section styles */
+    
+    /* #about{
+        height: 130vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+    /* .section-title-01 {
+        font-size: 4.5em;
+        font-weight: bolder;
+        margin: 0;
+        margin-top: 0;
+        color: #e74c3c;
+        opacity: .1;
+    }
+    
+    .section-title-02 {
+        font-weight: 700;
+        transform: translateY(-80px);
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        display: inline-block;
+        color: #e74c3c; 
+    }
+    .aboutCon{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 40%;
+        height: 4em;
+        align-items: center;   
+        margin-top: 5em;
+    }
+    .about .container .content {
+        column-gap: 40px;
+        width: 100%;
+    }
+    
+    .about-img img {
+        max-width: 100%;  
+        border-radius: 8px;
+        height: 400px;
+        width: 21em;
+        height: 30em;
+        position: absolute;
+        top: 13em;
+        left: 13em;
+    }
+    
+    .about-info{
+        position: absolute;
+        right: 20em;
+        margin-top: 13em;
+        left: 40%;
+        top: 0;
+    }
+    .about-info .description {
+        max-width: 600px;
+        overflow: hidden;
+    }
+    .about-info .description h3 {
+        font-size: 1.4em;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #358882;
+    }
+    .about-info .description h3 span {
+        color: #e74c3c;
+    }
+    
+    .about-info .description p {
+        color: #ccd6f6;
+        font-size: var(--normal-font-size);
+        margin-bottom: 15px;
+        padding-bottom: 20px;
+        line-height: 25px;
+        text-align: justify;
+        border-bottom: 1px solid var(--line-color);
+    }
+    
+    
+    .experience-projects-resume {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2em;
+        border-radius: 10px;
+        gap: 10px;
+    }
+    
+    .experience, .projects, .resume {
+        flex: 1;
+        text-align: center;
+        padding: 1em;
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .experience, .projects{
+        border: 2px solid #e74c3c;
+        width: 4em;
+        height: 7em;
+    }
+    .experience h3, .projects h3 {
+        font-size: 1.5em;
+        color: #358882;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    
+    .experience p, .projects p {
+        font-size: 2em;
+        color: #ccd6f6;
+        margin-top: 0;
+        margin-bottom: 7em;
+    }
+    
+    .experience:hover, .projects:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .resume-button {
+        display: inline-block;
+        padding: 0.5em;
+        font-size: 1.2em;
+        color: #358882;
+        border: 2px solid #e74c3c;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+        z-index: -1;
+    }
+    
+    .resume-button:hover {
+        background-color: rgba(231, 76, 60, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    
+        /* Social icons  */
+    /* .social-icons {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        right: 12em;
+    }
+    
+    .social-icon {
+        font-size: 2em;
+        color: #e74c3c;
+        
+        margin: 0.5em 0;
+        transition: transform 0.3s, color 0.3s, border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
+        padding: 10px;
+        border: 2px solid transparent;
+        border-radius: 50%;
+    } */
+}
